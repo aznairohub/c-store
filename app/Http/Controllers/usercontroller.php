@@ -20,7 +20,8 @@ class usercontroller extends Controller
 {
     public function index()
     {
-      return view('user.index');
+      $data['result'] = product::get();
+      return view('user.index',$data);
     }
     public function product()
     {
